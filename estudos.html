@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de Thiago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ESTUDOS DE THIAGO</h1>
+    </header>
+
+    <main class="catalogo">
+
+        <div class="materia" onclick="abrirMateria('Introdução a Lógica')">
+            Introdução a Lógica
+        </div>
+
+        <div class="materia" onclick="abrirMateria('Introdução a Computação')">
+            Introdução a Computação
+        </div>
+
+        <div class="materia" onclick="abrirMateria('Matemática')">
+            Matemática
+        </div>
+
+        <div class="materia" onclick="abrirMateria('Português')">
+            Português
+        </div>
+
+        <div class="materia" onclick="abrirMateria('Inglês')">
+            Inglês
+        </div>
+
+    </main>
+
+    <script>
+        function abrirMateria(materia) {
+            localStorage.setItem("materiaSelecionada", materia);
+            window.location.href = "anotacoes.html";
+        }
+    </script>
+
+</body>
+</html>

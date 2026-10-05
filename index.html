@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Estudos de Thiago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+
+    <div class="login-box">
+        <h1>LOGIN</h1>
+
+        <input type="text" id="usuario" placeholder="Usuário">
+        <input type="password" id="senha" placeholder="Senha">
+
+        <button onclick="fazerLogin()">LOGAR</button>
+
+        <p id="mensagem"></p>
+    </div>
+
+    <script>
+        function fazerLogin() {
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+            const mensagem = document.getElementById("mensagem");
+
+            if (usuario === "menezes071" && senha === "Thiago2008") {
+                window.location.href = "estudos.html";
+            } else {
+                mensagem.textContent = "Usuário ou senha incorretos.";
+            }
+        }
+    </script>
+
+</body>
+</html>

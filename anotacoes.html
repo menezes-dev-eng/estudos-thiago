@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ANOTAÇÕES</h1>
+    </header>
+
+    <main class="anotacoes-container">
+
+        <h2 id="nomeMateria"></h2>
+
+        <textarea
+            id="blocoNotas"
+            placeholder="Digite suas anotações aqui..."
+        ></textarea>
+
+        <button onclick="voltar()">VOLTAR</button>
+
+    </main>
+
+    <script>
+        const materia = localStorage.getItem("materiaSelecionada");
+
+        document.getElementById("nomeMateria").textContent = materia;
+
+        const blocoNotas = document.getElementById("blocoNotas");
+
+        const chave = "anotacoes_" + materia;
+
+        blocoNotas.value = localStorage.getItem(chave) || "";
+
+        blocoNotas.addEventListener("input", function() {
+            localStorage.setItem(chave, blocoNotas.value);
+        });
+
+        function voltar() {
+            window.location.href = "estudos.html";
+        }
+    </script>
+
+</body>
+</html>

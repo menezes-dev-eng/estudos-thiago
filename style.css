@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* LOGIN */
+
+.login-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 350px;
+    padding: 30px;
+    background-color: #111;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.login-box h1 {
+    margin-bottom: 25px;
+}
+
+.login-box input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    opacity: 0.8;
+}
+
+#mensagem {
+    color: red;
+}
+
+/* CABEÇALHO */
+
+header {
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    background-color: #111;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* CATÁLOGO */
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.materia {
+    min-height: 200px;
+    background-color: #111;
+    border: 2px solid white;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.materia:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.03);
+}
+
+/* ANOTAÇÕES */
+
+.anotacoes-container {
+    padding: 30px;
+}
+
+.anotacoes-container h2 {
+    margin-bottom: 20px;
+}
+
+#blocoNotas {
+    width: 100%;
+    min-height: 500px;
+    resize: vertical;
+
+    padding: 20px;
+
+    background-color: #111;
+    color: white;
+
+    border: 2px solid white;
+    border-radius: 8px;
+
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.anotacoes-container button {
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .catalogo {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .materia {
+        min-height: 150px;
+    }
+
+    .anotacoes-container {
+        padding: 20px;
+    }
+}
